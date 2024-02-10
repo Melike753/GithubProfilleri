@@ -1,0 +1,24 @@
+<!DOCTYPE html> <!--HTML5 doküman türünü belirtir.-->
+<html lang="en"> <!-- HTML belgesinin başlangıcını temsil eder ve sayfanın dilini İngilizce olarak ayarlar.-->
+<head> <!--Sayfanın başlık, karakter seti ve stil gibi meta bilgilerini içeren bölüm.-->
+    <meta charset="UTF-8"> <!--Karakter setini UTF-8 olarak ayarlar, bu da genellikle çoklu dil desteği için kullanılır.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--Sayfanın görüntüleme alanını ve başlangıç ölçeğini belirler, genellikle mobil cihazlarda düzgün görüntülenme için kullanılır.-->
+    <link rel="stylesheet" href="style.css"> <!--Sayfanın stilini tanımlayan dış CSS dosyasına bir bağlantı ekler.-->
+    <title>Github Profilleri</title> <!--Tarayıcı sekmesinde görünen sayfa başlığını belirler.-->
+</head>
+<body> <!--Sayfanın içeriğini barındıran bölüm.-->
+    <div class="container"> <!--Sayfanın ana içerik konteynerini temsil eder.-->
+        <h1>Github Api ile Profilleri Görüntüle</h1> <!-- Sayfanın başlık başlığını içerir.-->
+        <div class="searchBox"> <!--GitHub kullanıcı adı arama kutusu ve butonunu içeren bir bölüm.-->
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Github Kullanıcı Adı"> <!--GitHub kullanıcı adı girişi için bir metin kutusu.-->
+            <!--Kullanıcının GitHub profili aramak için tıklaması gereken bir buton. Buton tıklama olayı, "script.js" dosyasında tanımlanmış bir fonksiyon olan searchGithub() fonksiyonunu çağırır.-->
+            <button onclick="searchGithub()">Getir</button>
+        </div>
+        <!-- GitHub kullanıcı profili sonuçlarını görüntülemek için bir bölüm. Bu bölüm, JavaScript tarafından dinamik olarak güncellenir.-->
+        <div id="result" class="details"></div>
+    </div>
+    <script src="script.js"></script> <!--Sayfada kullanılacak JavaScript kodunu içeren dosyanın bağlantısını ekler.-->
+</body>
+</html>

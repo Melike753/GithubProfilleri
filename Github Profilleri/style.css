@@ -1,0 +1,147 @@
+/* Google Fonts'tan Poppins fontunu içe aktarır ve belirli ağırlıkları kullanır.*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Sayfadaki tüm öğeleri seçer.*/
+*{
+    margin: 0; /*Dış boşlukları sıfırlar.*/
+    padding: 0; /*İç boşlukları sıfırlar.*/
+    box-sizing: border-box; /*Kutu modelini kullanır ve iç içe geçmiş öğelerin genişlik ve yüksekliğini daha doğru bir şekilde kontrol eder.*/
+    font-family: "Poppins",sans-serif; /*Sayfadaki tüm metinlerde Poppins fontunu kullanır.*/
+}
+
+/* Sayfa gövdesini seçer.*/
+body{
+    background-color: #1a212d; /* Sayfa arka plan rengini ayarlar.*/
+    color: #fff; /*Sayfa metin rengini ayarlar.*/
+    display: flex; /* İçeriği yatay olarak hizalar.*/
+    justify-content: center; /* İçeriği yatay eksende ortalar.*/
+    align-items: center; /*İçeriği dikey eksende ortalar.*/
+    height: 100vh; /*Sayfa yüksekliğini görüntüleme penceresinin yüksekliğine ayarlar.*/
+}
+
+/* Ana içerik konteynerini seçer.*/
+.container{
+    width: 42rem; /*Konteyner genişliğini ayarlar.*/
+    padding: 30px 22px; /*İçeriğin kenar boşluklarını ayarlar.*/
+}
+
+
+.container h1{
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* GitHub kullanıcı adı arama kutusunu seçer.*/
+.searchBox{
+    background-color: #161922; /* Arama kutusunun arka plan rengini ayarlar.*/
+    display: flex; /*İçeriği yatay olarak hizalar.*/
+    align-items: center; /* İçeriği dikey eksende ortalar.*/
+    justify-content: space-between; /*İçeriği arasında boşluk bırakarak yatay olarak hizalar.*/
+    padding: 10px; /*Arama kutusunun kenar boşluklarını ayarlar.*/
+    border: 1px solid #999; /*Arama kutusuna bir kenarlık ekler.*/
+    border-radius: 6px; /*Arama kutusuna köşelerde yumuşaklık sağlayan bir kenar yarıçapı ekler.*/
+}
+
+/* GitHub kullanıcı adı girişi için metin kutusunu seçer.*/
+.searchBox input{
+    background-color: transparent; /*Metin kutusunun arka plan rengini şeffaf yapar.*/
+    outline: none; /*Metin kutusu etrafındaki vurguyu kaldırır.*/
+    border: none; /*Metin kutusu kenarlığını kaldırır.*/
+    width: 80%; /*Metin kutusunun genişliğini ayarlar.*/
+    color: #fff; /*Metin rengini belirler.*/
+    font-size: 15px; /*Metin boyutunu belirler.*/
+}
+
+/*Arama butonunu seçer.*/
+.searchBox button{
+    background-color: #675afe; /*Butonun arka plan rengini ayarlar.*/
+    color: #fff; /*Buton metin rengini ayarlar.*/
+    padding: 5px 10px; /*Buton kenar boşluklarını ayarlar.*/
+    border: none; /*Buton kenarlığını kaldırır.*/
+    outline: none; /*Buton etrafındaki vurguyu kaldırır.*/
+    cursor: pointer; /*Butona fare imleci stili ekler.*/
+    border-radius: 6px;  /*Butona köşelerde yumuşaklık sağlayan bir kenar yarıçapı ekler.*/
+    transition: 300ms all ease; /*Butonun durum değişimini animasyonlu bir şekilde geçiş yapmasını sağlar.*/
+}
+
+/*Arama butonunun hover durumunu seçer.*/
+.searchBox button:hover{
+    background-color: #3a28fa; /*Hover durumunda butonun arka plan rengini değiştirir.*/
+}
+
+/*Kullanıcı profili sonuçlarını görüntülemek için seçilmiş bölümü temsil eder.*/
+.details{
+    margin-top: 20px; /*Detay bölümünün üst tarafındaki boşluğu ayarlar.*/
+    background-color: #161922; /*Detay bölümünün arka plan rengini ayarlar.*/
+    padding: 20px 25px; /* Detay bölümünün içeriğinin kenar boşluklarını ayarlar.*/
+    border: 1px solid #999; /*Detay bölümüne bir kenarlık ekler.*/
+    border-radius: 6px; /*Detay bölümüne köşelerde yumuşaklık sağlayan bir kenar yarıçapı ekler.*/
+    display: none; /* Detay bölümünü varsayılan olarak gizler.*/
+}
+
+/*Kullanıcı profili bölümünü seçer.*/
+.profile{
+    display: flex; /*İçeriği yatay olarak hizalar.*/
+}
+
+/*Kullanıcı profil resmi bölümünü seçer.*/
+.profile-image{
+    height: 100px; /*Profil resminin yüksekliğini ayarlar.*/
+    width: 100px; /*Profil resminin genişliğini ayarlar.*/
+    margin-right: 10px; /* Profil resminin sağ tarafındaki boşluğu ayarlar.*/
+    border-radius: 50%; /*Profil resminin kenarlarını yuvarlar.*/
+    overflow: hidden; /* İçeriği taşan kısımları gizler.*/
+}
+
+/*Profil resmi içindeki resmi seçer.*/
+.profile-image img{
+    width: 100%; /*Resmi genişliği %100 olarak ayarlar.*/
+    height: 100%; /*Resmi yüksekliği %100 olarak ayarlar.*/
+}
+
+/*Kullanıcı profil detaylarını içeren bölümü seçer.*/
+.profile-details{
+    padding: 10px; /*Profil detaylarının içeriğinin kenar boşluklarını ayarlar.*/
+    width: 25rem; /*Profil detaylarının genişliğini ayarlar.*/
+}
+
+/*Kullanıcı adını temsil eden bölümü seçer.*/
+.username{
+    font-size: 13px; /*Kullanıcı adının font boyutunu ayarlar.*/
+    color: #675afe; /*Kullanıcı adının rengini ayarlar.*/
+}
+
+/*Kullanıcının biyografisini temsil eden bölümü seçer.*/
+.bio{
+    font-size: 14px; /*Biyografinin font boyutunu ayarlar.*/
+    margin-top: 10px; /*Biyografi bölümü ile üst tarafındaki boşluğu ayarlar.*/
+}
+
+/*Kullanıcının istatistiklerini içeren bölümü seçer.*/
+.stats{
+    background-color: #20232c; /* İstatistikler bölümünün arka plan rengini ayarlar.*/
+    display: flex; /* İçeriği yatay olarak hizalar.*/
+    justify-content: space-around; /* İçeriği arasında boşluk bırakarak yatay olarak hizalar.*/
+    align-items: center; /* İçeriği dikey eksende ortalar.*/
+    padding: 20px 0px; /*İstatistikler bölümünün içeriğinin kenar boşluklarını ayarlar.*/
+    margin-top: 20px; /*İstatistikler bölümü ile üst tarafındaki boşluğu ayarlar.*/
+    text-align: center; /*Metinleri ortalar.*/
+    border: 1px solid #999; /* İstatistikler bölümüne bir kenarlık ekler.*/
+    border-radius: 6px; /*İstatistikler bölümüne köşelerde yumuşaklık sağlayan bir kenar yarıçapı ekler.*/
+}
+
+/*Kullanıcının medya bilgilerini içeren bölümü seçer.*/
+.media{
+    display: flex; /* İçeriği yatay olarak hizalar.*/
+    flex-wrap: wrap; /* İçeriği sarmalayarak bir satırdan diğerine geçişine izin verir.*/
+    margin-top: 20px; /* Medya bölümü ile üst tarafındaki boşluğu ayarlar.*/
+}
+
+/*Medya bölümündeki paragraf öğelerini seçer.*/
+.media p{
+    width: 50%; /*Paragraf öğelerinin genişliğini yarıya indirir.*/
+    display: flex; /*İçeriği yatay olarak hizalar.*/
+    align-items: center; /* İçeriği dikey eksende ortalar.*/
+    font-size: 13px; /*Paragraf metin font boyutunu ayarlar.*/
+}
